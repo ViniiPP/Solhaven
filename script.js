@@ -164,14 +164,14 @@ volumeSlider.addEventListener('input', function() {
 
 /* sistema de sons ambiente */
 const ambientAudios = {
-    rain: new Audio('../src/assetts/chuva.mp3'),
-    fire: new Audio('../src/assetts/fogueira.mp3')
+    rain: new Audio('./src/assetts/chuva.mp3'),
+    fire: new Audio('./src/assetts/fogueira.mp3')
 };
 
 // áudios tocam em loop
 Object.values(ambientAudios).forEach(audio => {
     audio.loop = true;
-    audio.volume = 0.15; // Volume dos efeitos
+    audio.volume = 0.2; // Volume dos efeitos
     
     audio.addEventListener('error', (e) => {
         console.error("Erro ao carregar o áudio. Verifique o caminho da pasta:", e);
