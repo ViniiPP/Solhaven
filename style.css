@@ -268,3 +268,47 @@ body {
   background: rgba(255, 255, 255, 0.40);
   box-shadow: 0 0 10px rgba(255, 255, 255, 0.25);
 }
+
+ /* MOBILE */
+@media (max-width: 768px) {
+  .logo {
+    width: 100px;
+    top: 16px;
+    left: 16px;
+  }
+
+  .player {
+    width: 90%;
+    min-width: unset;
+    bottom: 20px;
+    padding: 16px 20px;
+  }
+
+  .social-icons {
+    bottom: auto;
+    top: 16px;
+    left: auto;
+    right: 16px;
+    margin-left: 0; 
+    flex-direction: row;
+    gap: 10px;
+  }
+
+  .social-icons a {
+    width: 36px;
+    height: 36px;
+    font-size: 14px;
+  }
+  
+  .player__controls button {
+    width: 38px;
+    height: 38px;
+    font-size: 14px;
+  }
+
+  #btn-play {
+    width: 48px;
+    height: 48px;
+    font-size: 18px;
+  }
+}
