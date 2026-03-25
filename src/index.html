@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="../src/style.css">
+    <link rel="icon" type="image/png" href="/src/assetts/Solhaven.png">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Solhaven</title>
 </head>
@@ -14,43 +15,40 @@
         Seu browser não suporta vídeo HTML5
     </video>
 
+    <img src="./assetts/Solhaven.png" alt="Solhaven Logo" class="logo">
+
     <nav class="social-icons">
-        <a href="#" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
-        <a href="#" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
-        <a href="#" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.instagram.com/viniipp" target="_blank" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+        <a href="https://www.linkedin.com/in/vinicius-pereira-polli17" target="_blank" aria-label="Linkedin"><i class="fab fa-linkedin"></i></a>
+        <a href="https://github.com/ViniiPP" target="_blank" aria-label="GitHub"><i class="fab fa-github"></i></a>
     </nav>
 
     <div class="player" id="player">
 
-        <!-- Infos da música -->
         <div class="player__info">
             <p class="player__track">Solhaven</p>
             <p class="player__artist">Lo-Fi</p>
         </div>
 
-        <!-- controles principais -->
         <div class="player__controls">
             <button id="btn-prev" aria-label="Musica Anterior"><i class="fas fa-backward"></i></button>
             <button id="btn-play" aria-label="Play / Pause"><i class="fas fa-play"></i></button>
             <button id="btn-next" aria-label="Proxima Musica"><i class="fas fa-forward"></i></button>
         </div>
 
-        <!-- volume + opções -->
         <div class="player__extras">
             <input type="range" id="volume-slider" min="0" max="100" value="50" aria-label="Volume">
             <button id="btn-more" aria-label="Mais opções"><i class="fas fa-ellipsis-h"></i></button>
         </div>
 
-        <!-- Painel de sons ambiente (começa oculto) -->
-        <div class="player__ambient" id="ambient-panel" hidden>
-            <button data-sound="none">🔇 Silêncio</button>
-            <button data-sound="rain">🌧️ Chuva</button>
-            <button data-sound="fire">🔥 Fogo</button>
+        <div class="player__ambient" id="ambient-panel">
+            <button data-sound="none"><i class="fas fa-volume-mute"></i> Silêncio</button>
+            <button data-sound="rain"><i class="fas fa-cloud-rain"></i> Chuva</button>
+            <button data-sound="fire"><i class="fas fa-fire"></i> Fogo</button>
         </div>
 
     </div>
 
-    <!-- YouTube player invisível -->
     <div id="yt-player"></div>
     <script src="https://www.youtube.com/iframe_api"></script>
     <script src="../src/script.js"></script>
