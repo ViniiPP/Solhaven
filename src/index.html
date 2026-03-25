@@ -3,14 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="../css/style.css">
+    <link rel="stylesheet" href="../src/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <title>Solhaven</title>
 </head>
 
 <body>
-    <video id="bg-video" autoplay loop muted>
-        <source src="/src/imgs/background.mp4" type="video/mp4"/>
+    <video id="bg-video" autoplay loop muted playsinline>
+        <source src="../src/assetts/background.mp4" type="video/mp4"/>
         Seu browser não suporta vídeo HTML5
     </video>
 
@@ -24,27 +24,35 @@
 
         <!-- Infos da música -->
         <div class="player__info">
-            <p class="player_track">Solhaven </p>
-            <p class="player__artist">ViniiPP </p>
+            <p class="player__track">Solhaven</p>
+            <p class="player__artist">Lo-Fi</p>
         </div>
 
-        <!-- controles principais de uso -->
+        <!-- controles principais -->
         <div class="player__controls">
             <button id="btn-prev" aria-label="Musica Anterior"><i class="fas fa-backward"></i></button>
             <button id="btn-play" aria-label="Play / Pause"><i class="fas fa-play"></i></button>
             <button id="btn-next" aria-label="Proxima Musica"><i class="fas fa-forward"></i></button>
         </div>
 
-        <!--volume + opçoes -->
+        <!-- volume + opções -->
         <div class="player__extras">
             <input type="range" id="volume-slider" min="0" max="100" value="50" aria-label="Volume">
-
             <button id="btn-more" aria-label="Mais opções"><i class="fas fa-ellipsis-h"></i></button>
         </div>
+
+        <!-- Painel de sons ambiente (começa oculto) -->
+        <div class="player__ambient" id="ambient-panel" hidden>
+            <button data-sound="none">🔇 Silêncio</button>
+            <button data-sound="rain">🌧️ Chuva</button>
+            <button data-sound="fire">🔥 Fogo</button>
+        </div>
+
     </div>
 
+    <!-- YouTube player invisível -->
     <div id="yt-player"></div>
     <script src="https://www.youtube.com/iframe_api"></script>
-    <script src="/src/javascript/script.js"></script>
+    <script src="../src/script.js"></script>
 </body>
 </html>
